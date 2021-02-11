@@ -9,7 +9,7 @@ import Foundation
 
 struct Session {
     var title: String
-    var duration: String
+    var duration: Int
     var date: Date
     var category: Category
     
