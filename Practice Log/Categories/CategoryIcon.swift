@@ -25,11 +25,17 @@ struct CategoryIcon: View {
 }
 
 struct CategoryIcon_Previews: PreviewProvider {
+    
     static var previews: some View {
         Group {
             HStack {
-                CategoryIcon(category: .fitness)
-                CategoryIcon(category: .fitness, highlighted: true)
+                ForEach(Session.Category.allCases) {
+                    category in
+                    VStack {
+                        CategoryIcon(category: category)
+                        CategoryIcon(category: category, highlighted: true)
+                    }
+                }
             }
         }
         .previewLayout(.sizeThatFits)

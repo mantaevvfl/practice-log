@@ -28,7 +28,7 @@ struct Session {
             case .fitness:
                 return "person"
             case .defending:
-                return "sheild.lefthalf.fill"
+                return "shield.lefthalf.fill"
             }
         }
         
