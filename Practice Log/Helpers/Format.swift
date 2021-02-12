@@ -9,6 +9,8 @@ import Foundation
 
 extension Int {
     var timeFormat: String {
+        if self <= 0 {return "Invalid Entry"}
+        
         let hours = self/60
         let minutes = self%60
         return "\(hours)h \(minutes)m"

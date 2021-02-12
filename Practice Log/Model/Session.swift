@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Session {
     var title: String
@@ -15,6 +16,21 @@ struct Session {
     
     enum Category: String, CaseIterable, Identifiable {
         case shooting, passing, dribbling, fitness, defending
+        
+        var imageName: String {
+            switch(self) {
+            case .shooting:
+                return "dot.square"
+            case .passing:
+                return "arrow.up.right"
+            case .dribbling:
+                return "arrow.swap"
+            case .fitness:
+                return "person"
+            case .defending:
+                return "sheild.lefthalf.fill"
+            }
+        }
         
         var id: String {self.rawValue}
     }
