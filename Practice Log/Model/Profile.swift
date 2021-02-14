@@ -23,7 +23,7 @@ struct Profile {
         var highestStreak = 0, count = 0
         let calendar = Calendar.current
         for (i, session) in sessions[1..<sessions.count].enumerated() {
-            let previousSessionDate = sessions[i].date // The index always starts at 0
+            let previousSessionDate = sessions[i].date // The index always starts at 0 regardless if you start from the second element of the array
             let dayAfterPrevious = calendar.date(byAdding: .day, value: 1, to: previousSessionDate)!
             if dayAfterPrevious.dateFormat == session.date.dateFormat {
                 count += 1
