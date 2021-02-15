@@ -11,13 +11,14 @@ struct SessionRow: View {
     var session: Session
     
     var body: some View {
-        HStack() {
+        HStack(spacing: 15) {
             CategoryIcon(category: session.category, highlighted: true)
             Text(session.title)
                 .font(.headline)
             Spacer()
             VStack(alignment: .trailing, spacing: 5.0) {
-                Text(session.duration.timeFormat).bold()
+                Text(session.duration.timeFormat)
+                    .bold()
                 Text(session.date.dateFormat)
                     .font(.caption)
             }

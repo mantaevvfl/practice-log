@@ -19,7 +19,6 @@ struct CategoryIcon: View {
             Image(systemName: category.imageName)
                 .foregroundColor(Color.white)
         }
-        .padding()
         
     }
 }
