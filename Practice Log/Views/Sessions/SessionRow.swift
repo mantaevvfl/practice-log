@@ -11,8 +11,8 @@ struct SessionRow: View {
     var session: Session
     
     var body: some View {
-        HStack {
-            CategoryIcon(category: .dribbling, highlighted: true)
+        HStack() {
+            CategoryIcon(category: session.category, highlighted: true)
             Text(session.title)
                 .font(.headline)
             Spacer()
@@ -28,7 +28,7 @@ struct SessionRow: View {
 
 struct SessionRow_Previews: PreviewProvider {
     static var previews: some View {
-        SessionRow(session: TestData.profile.sessions[0])
+        SessionRow(session: TestData.profile.sessions[2])
             .previewLayout(.sizeThatFits)
     }
 }

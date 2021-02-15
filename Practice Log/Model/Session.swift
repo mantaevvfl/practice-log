@@ -8,11 +8,12 @@
 import Foundation
 import SwiftUI
 
-struct Session {
-    var title: String
-    var duration: Int
-    var date: Date
-    var category: Category
+struct Session: Identifiable {
+    let id = UUID()
+    let title: String
+    let duration: Int
+    let date: Date
+    let category: Category
     
     enum Category: String, CaseIterable, Identifiable {
         case shooting, passing, dribbling, fitness, defending
