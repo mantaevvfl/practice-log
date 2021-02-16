@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CategorySelection: View {
-    var selectedCategory: Session.Category
+    @State var selectedCategory: Session.Category
     
     var body: some View {
         HStack {
             Spacer()
             ForEach(Session.Category.allCases) {
                 category in
-                CategoryButton(category: category, selected: self.selectedCategory == category)
+                CategoryButton(category: category, selected: self.selectedCategory == category, action: {self.selectedCategory = category})
                 Spacer()
             }
         }
@@ -25,5 +25,6 @@ struct CategorySelection: View {
 struct CategorySelection_Previews: PreviewProvider {
     static var previews: some View {
         CategorySelection(selectedCategory: .fitness)
+            .previewLayout(.sizeThatFits)
     }
 }

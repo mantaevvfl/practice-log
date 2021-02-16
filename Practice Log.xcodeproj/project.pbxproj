@@ -21,6 +21,7 @@
 		3FA1438D25DB41D30053796B /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1438C25DB41D30053796B /* CategoryButton.swift */; };
 		3FA1439125DB44830053796B /* CategorySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1439025DB44830053796B /* CategorySelection.swift */; };
 		3FA1439525DB4B5C0053796B /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1439425DB4B5C0053796B /* Title.swift */; };
+		3FC0713125DC4665001A23C2 /* SessionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC0713025DC4665001A23C2 /* SessionDetail.swift */; };
 		3FD8EABF25D636A8002638CD /* Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8EABE25D636A8002638CD /* Progress.swift */; };
 		3FD8EAC225D6395C002638CD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8EAC125D6395C002638CD /* Profile.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		3FA1438C25DB41D30053796B /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		3FA1439025DB44830053796B /* CategorySelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelection.swift; sourceTree = "<group>"; };
 		3FA1439425DB4B5C0053796B /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		3FC0713025DC4665001A23C2 /* SessionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetail.swift; sourceTree = "<group>"; };
 		3FD8EABE25D636A8002638CD /* Progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Progress.swift; sourceTree = "<group>"; };
 		3FD8EAC125D6395C002638CD /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3F26525125D9D8620091DB8F /* SessionRow.swift */,
+				3FC0713025DC4665001A23C2 /* SessionDetail.swift */,
 			);
 			path = Sessions;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				3F2CDE9725DA180000EC18EB /* PracticeLog.swift in Sources */,
 				3F26525A25D9DFD90091DB8F /* UserProfile.swift in Sources */,
 				3FD8EAC225D6395C002638CD /* Profile.swift in Sources */,
+				3FC0713125DC4665001A23C2 /* SessionDetail.swift in Sources */,
 				3F0C426425D453D00077A234 /* ContentView.swift in Sources */,
 				3F0C426225D453D00077A234 /* Practice_LogApp.swift in Sources */,
 				3FD8EABF25D636A8002638CD /* Progress.swift in Sources */,

@@ -9,16 +9,15 @@ import SwiftUI
 
 struct CategoryButton: View {
     var category: Session.Category
-    @State var selected: Bool = false
+    var selected: Bool = false
+    var action: () -> Void
     
     var body: some View {
-        Button(action: {
-            self.selected.toggle()
-        }) {
+        Button(action: action) {
             VStack {
                 CategoryIcon(category: category, highlighted: selected)
                 Text(category.rawValue.capitalized)
-                    .font(.headline)
+                    .font(.caption)
                     .foregroundColor(selected ? .primary : .secondary)
             }
 
@@ -29,8 +28,8 @@ struct CategoryButton: View {
 struct CategoryButton_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CategoryButton(category: .defending)
-            CategoryButton(category: .shooting, selected: true)
+            CategoryButton(category: .defending, action: {})
+            CategoryButton(category: .shooting, selected: true, action: {})
         }
         .previewLayout(.sizeThatFits)
         
