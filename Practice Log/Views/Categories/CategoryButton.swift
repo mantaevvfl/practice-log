@@ -15,7 +15,13 @@ struct CategoryButton: View {
         Button(action: {
             self.selected.toggle()
         }) {
-            CategoryIcon(category: category, highlighted: selected)
+            VStack {
+                CategoryIcon(category: category, highlighted: selected)
+                Text(category.rawValue.capitalized)
+                    .font(.headline)
+                    .foregroundColor(selected ? .primary : .secondary)
+            }
+
         }
     }
 }
