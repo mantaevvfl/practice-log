@@ -25,6 +25,6 @@ struct PracticeLog: View {
 
 struct PracticeLog_Previews: PreviewProvider {
     static var previews: some View {
-        PracticeLog(profile: TestData.profile, someFunction: {})
+        PracticeLog(profile: TestData.defaultProfile, someFunction: {})
     }
 }

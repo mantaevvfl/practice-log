@@ -33,6 +33,6 @@ struct UserProfile: View {
 struct UserProfile_Previews: PreviewProvider {
     
     static var previews: some View {
-        UserProfile(profile: TestData.profile)
+        UserProfile(profile: TestData.defaultProfile)
     }
 }

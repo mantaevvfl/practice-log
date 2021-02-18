@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct SessionView: View {
     @Environment(\.presentationMode) var presentationMode
     
@@ -17,7 +15,6 @@ struct SessionView: View {
     @State var description: String
     @State var duration: String
     
-    var profile: Profile
     
     
     var body: some View {
@@ -46,6 +43,7 @@ struct SessionView_Previews: PreviewProvider {
     static var previews: some View {
         // Display multiple previews
         Group {
+            SessionView(title: "My favourite session", selectedCategory: .dribbling, description: "I did many stepovers and L-drags", duration: "75")
             Group {
                 SessionDetail(title: .constant("Title"), selectedCategory: .constant(.dribbling), duration: .constant("100"), description: .constant("I am feeling completely drained"))
                 Title(title: .constant("Title"))
