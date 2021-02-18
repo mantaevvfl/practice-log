@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Session: Identifiable {
     let id = UUID()

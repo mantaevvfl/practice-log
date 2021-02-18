@@ -32,5 +32,6 @@ struct SessionDetail: View {
 struct SessionDetail_Previews: PreviewProvider {
     static var previews: some View {
         SessionDetail(title: .constant("Freestyle Skills"), selectedCategory: .constant(.dribbling), duration: .constant("120"), description: .constant("A lot of skill moves done."))
+        
     }
 }
