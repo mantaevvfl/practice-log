@@ -10,7 +10,7 @@ import Foundation
 
 final class StateController : ObservableObject {
     // The business logic of our app resides here
-    @Published var profile: Profile = TestData.defaultProfile
+    @Published var profile: Profile = TestData.profile
     
     func add(_ session: Session) {
         profile.add(session: session)

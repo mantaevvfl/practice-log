@@ -14,5 +14,5 @@ struct TestData {
         Session(title: "Headers", duration: 75, date: Date(), category: .defending)
     ]
     
-    static let defaultProfile: Profile = Profile(sessions: sessions)
+    static let profile: Profile = Profile(sessions: sessions)
 }

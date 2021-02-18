@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryIcon: View {
-    let category: Session.Category
+    var category: Session.Category
     var highlighted: Bool = false
     
     var body: some View {

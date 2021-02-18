@@ -16,7 +16,8 @@ struct SessionDetail: View {
     var body: some View {
         List {
             Title(title: $title)
-            CategorySelection(selectedCategory: selectedCategory)
+            CategorySelection(selectedCategory: $selectedCategory)
+                .buttonStyle(PlainButtonStyle())
             Group {
                 TextField("Duration", text: $duration)
                     .keyboardType(.numberPad)

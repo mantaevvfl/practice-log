@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategorySelection: View {
-    @State var selectedCategory: Session.Category
+    @Binding var selectedCategory: Session.Category
     
     var body: some View {
         HStack {
@@ -24,7 +24,7 @@ struct CategorySelection: View {
 
 struct CategorySelection_Previews: PreviewProvider {
     static var previews: some View {
-        CategorySelection(selectedCategory: .fitness)
+        CategorySelection(selectedCategory: .constant(.fitness))
             .previewLayout(.sizeThatFits)
     }
 }

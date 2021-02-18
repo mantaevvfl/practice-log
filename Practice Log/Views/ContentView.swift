@@ -9,13 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject private var stateController: StateController
+    
     var body: some View {
-        Text("Hello World!")
+        // Root View
+        PracticeLog()
+            .environmentObject(stateController)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(StateController())
     }
 }

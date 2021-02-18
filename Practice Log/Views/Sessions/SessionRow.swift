@@ -29,7 +29,7 @@ struct SessionRow: View {
 
 struct SessionRow_Previews: PreviewProvider {
     static var previews: some View {
-        SessionRow(session: TestData.defaultProfile.sessions[2])
+        SessionRow(session: TestData.profile.sessions[2])
             .previewLayout(.sizeThatFits)
     }
 }

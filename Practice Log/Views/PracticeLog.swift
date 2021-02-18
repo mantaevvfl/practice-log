@@ -8,23 +8,29 @@
 import SwiftUI
 
 struct PracticeLog: View {
-    var profile: Profile
-    var someFunction: () -> Void
+    @EnvironmentObject private var stateController: StateController
+    
+    @State private var addingNewSession: Bool = false
     
     var body: some View {
         NavigationView {
-            UserProfile(profile: profile)
+            UserProfile(profile: stateController.profile)
                 .navigationBarTitle("Practice Log")
-                .navigationBarItems(trailing: Button(action: someFunction) {
+                .navigationBarItems(trailing: Button(action: {self.addingNewSession = true}) {
                     Image(systemName: "plus")
                         .font(.title)
                 })
+                .sheet(isPresented: $addingNewSession) {
+                    SessionView()
+                        .environmentObject(self.stateController)
+                }
         }
     }
 }
 
 struct PracticeLog_Previews: PreviewProvider {
     static var previews: some View {
-        PracticeLog(profile: TestData.defaultProfile, someFunction: {})
+        PracticeLog()
+            .environmentObject(StateController())
     }
 }
