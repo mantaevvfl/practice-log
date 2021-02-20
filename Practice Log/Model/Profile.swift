@@ -20,22 +20,24 @@ struct Profile {
         return duration
     }
     var dayStreak: Int {
-        var highestStreak = 0, count = 0
-        let calendar = Calendar.current
-        for (i, session) in sessions[1..<sessions.count].enumerated() {
-            let previousSessionDate = sessions[i].date // The index always starts at 0 regardless if you start from the second element of the array
-            let dayAfterPrevious = calendar.date(byAdding: .day, value: 1, to: previousSessionDate)!
-            if dayAfterPrevious.dateFormat == session.date.dateFormat {
+        var count = 0, max = 0
+        
+        for (i, session) in sessions[0..<(sessions.count-1)].enumerated() {
+            let nextDate = Calendar.current.date(byAdding: .day, value: 1, to: session.date)!
+            let nextDateComponents = Calendar.current.dateComponents([.month, .day, .year], from: nextDate)
+            let nextSessionDateComponents = Calendar.current.dateComponents([.month, .day, .year], from: sessions[i+1].date)
+            if nextSessionDateComponents == nextDateComponents {
                 count += 1
+                if count > max {
+                    max = count
+                    count = 0
+                }
             }
             else {
-                if count > highestStreak {
-                    highestStreak = count
-                }
                 count = 0
             }
         }
-        return highestStreak
+        return max
     }
     
     mutating func add(session: Session) {
